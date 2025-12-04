@@ -16,7 +16,7 @@
                 <div class="card col-3 border-0 bg-transparent pb-0">
                     <img src="@member.Photo"/>
                     <div class="card-body text-center">
-                        <p class="name">@member.Name</p>
+                        <p class="name">@member.Name.ToUpper()</p>
                         @foreach (var position in member.Position)
                         {
                             <p class="m-position">@position</p>
