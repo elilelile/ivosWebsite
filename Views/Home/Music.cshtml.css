@@ -1,0 +1,39 @@
+﻿.bg-primary {
+    background-color: #A29B95 !important;
+}
+
+hr {
+    color: #610D0C;
+    height: 3px;
+    opacity: initial;
+}
+
+.album-header {
+    color: #610D0C;
+    font-family: 'Montserrat';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 7px;
+}
+
+.card-text {
+    color: #610D0C;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+img {
+    border-radius: 8px;
+}

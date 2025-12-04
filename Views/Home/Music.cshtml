@@ -1,5 +1,77 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ivosWebsite.Models.Music>
+
 @{
+    ViewData["Title"] = "Music";
 }
+
+<section class="container-fluid bg-primary">
+    <section class="container">
+        <div class="d-flex gap-5 align-items-center pt-5 pb-5">
+            <h1 class="album-header text-nowrap">ALBUMS</h1>
+            <hr class="m-0 flex-grow-1"/>
+        </div>
+        <div class="container">
+            <div class="row">
+                @foreach (var album in Model)
+                {
+                    @if (album.Type == "album")
+                    {
+                        <div class="card col-2 bg-transparent pb-5 border-0">
+                            <img src="@album.Photo" class="p-1 pb-1"/>
+                            <div class="card-body p-0">
+                                <p class="card-text title pt-1 mb-0">@album.Title</p>
+                                <p class="card-text date pb-1">Released on @album.ReleaseDate</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="d-flex gap-5 align-items-center pb-5">
+            <h1 class="album-header text-nowrap">SINGLES</h1>
+            <hr class="m-0 flex-grow-1" />
+        </div>
+        <div class="container">
+            <div class="row">
+                @foreach (var single in Model)
+                {
+                    @if (single.Type == "single")
+                    {
+                        <div class="card col-2 bg-transparent pb-5 border-0">
+                            <img src="@single.Photo" class="p-1 pb-1" />
+                            <div class="card-body p-0">
+                                <p class="card-text title pt-1 mb-0">@single.Title</p>
+                                <p class="card-text date pb-1">Released on @single.ReleaseDate</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="d-flex gap-5 align-items-center pb-5">
+            <h1 class="album-header text-nowrap">FEATURED IN</h1>
+            <hr class="m-0 flex-grow-1" />
+        </div>
+        <div class="container">
+            <div class="row">
+                @foreach (var featured in Model)
+                {
+                    @if (featured.Type == "featured")
+                    {
+                        <div class="card col-2 bg-transparent pb-5 border-0">
+                            <img src="@featured.Photo" class="p-1 pb-1" />
+                            <div class="card-body p-0">
+                                <p class="card-text title pt-1 mb-0">@featured.Title</p>
+                                <p class="card-text date pb-1">Released on @featured.ReleaseDate</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+</section>

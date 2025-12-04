@@ -7,7 +7,7 @@ namespace ivosWebsite.Models
     {
         public string Title { get; set; }
         [DataType(DataType.Date)]
-        public DateTime ReleaseDate {  get; set; }
+        public string ReleaseDate {  get; set; }
         public string Photo {  get; set; }
         public string Type { get; set; }
     }
