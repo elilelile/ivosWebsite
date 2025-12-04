@@ -1,4 +1,4 @@
-namespace ivos_website.Models
+namespace ivosWebsite.Models
 {
     public class ErrorViewModel
     {

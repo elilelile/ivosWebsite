@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using ivosWebsite.Models;
+using ivosWebsite.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<MemberService>();
+builder.Services.AddScoped<MusicService>();
 
 var app = builder.Build();
 

@@ -1,8 +1,82 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid p-0">
+    <div class="video-container">
+        <video autoplay muted loop playsinline class="landing-page-vid">
+            <source src="/videos/ivos.mp4" type="video/mp4"/>
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
 </div>
+
+<section class="container-fluid bg-primary pb-4">
+    <h1 class="title text-center pt-5 pb-5 title-music mb-0">MUSIC</h1>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-3">
+                <div class="card border-0">
+                    <a href="https://open.spotify.com/album/5TbOkIWnSSdde2HYigXvBl" target="_blank">
+                        <img src="/images/music/mundo.jpg" class="card-img-top" alt="Mundo" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card border-0">
+                    <a href="https://open.spotify.com/album/3rK5A6he7WDayWPDm3ttSh" target="_blank">
+                        <img src="/images/music/andalucia.jpg" class="card-img-top" alt="Andalucia" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card border-0">
+                    <a href="https://open.spotify.com/album/4pOYu3ruXW8StaMZmXTcDs" target="_blank">
+                        <img src="/images/music/aura.png" class="card-img-top" alt="Aura" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card border-0">
+                    <a href="https://open.spotify.com/album/5mGR6qKnpILzSzq1yyAUXk" target="_blank">
+                        <img src="/images/music/clapclapclap.jpg" class="card-img-top" alt="CLAPCLAPCLAP!" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center pt-5 pb-5">
+        <a asp-controller="Home" asp-action="Music" class="view-all py-3 px-5 text-decoration-none">
+            <span class="view-all-text">VIEW ALL</span>
+        </a>
+    </div>
+</section>
+
+<section class="container-fluid bg-secondary pb-5">
+    <h1 class="title text-center pt-5 pb-5 title-ivos mb-0">IVOS</h1>
+    <div class="container pb-4">
+        <div class="row g-4">
+            <div class="col-6">
+                <div class="card h-100 border-0">
+                    <img src="/images/ivos.png" class="card-img-top" alt="IV of Spades" />
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card h-100 border-0 bg-secondary">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <p class="card-text px-2 pb-5">
+                            IV of Spades is a Filipino rock band based in Metro Manila, Philippines, 
+                            known for their distinct sound and style. The group is composed of Zild Benitez, 
+                            Blaster Silonga , Badjao de Castro, and Unique Salonga. They gained widespread 
+                            recognition for their hit songs “Mundo” and “Come Inside of My Heart.”
+                        </p>
+                        <a asp-controller="Home" asp-action="About" class="about-btn text-decoration-none">
+                            <span class="about-btn-text">ABOUT THE MEMBERS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>

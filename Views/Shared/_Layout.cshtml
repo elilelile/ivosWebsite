@@ -3,42 +3,68 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ivos_website</title>
+    <title>@ViewData["Title"] - IV of Spades</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/ivosWebsite.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ivos_website.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body class="mb-0">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ivos_website</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-expand-lg bg-primary py-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="/images/spade.png" alt="Logo" idth="30" height="27" class="d-inline-block align-text-top"/>
+                    <span class="brand-text main">IV OF SPADES</span>
+                </a>
+                <ul class="navbar-nav gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewData["ActivePage"] as string == "Home" ? "active" : "")" 
+                        asp-area="" asp-controller="Home" asp-action="Index">
+                        <span class="brand-text">HOME</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewData["ActivePage"] as string == "Music" ? "active" : "")" 
+                        asp-area="" asp-controller="Home" asp-action="Music"><span class="brand-text">MUSIC</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewData["ActivePage"] as string == "About" ? "active" : "")" 
+                        asp-area="" asp-controller="Home" asp-action="About"><span class="brand-text">ABOUT</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewData["ActivePage"] as string == "SignUp" ? "active" : "")" 
+                        asp-area="" asp-controller="Home" asp-action="SignUp"><span class="brand-text">SIGN UP</span></a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="https://www.youtube.com/@@IVOFSPADES" target="_blank">
+                        <img src="/images/icon/youtube.png" alt="Youtube" idth="30" height="24" class="d-inline-block align-text-top" />
+                    </a>
+                    <a href="https://open.spotify.com/artist/4k9wp4ipHdA1bu1T4x1ZTG" target="_blank">
+                        <img src="/images/icon/spotify.png" alt="Spotify" idth="30" height="24" class="d-inline-block align-text-top" />
+                    </a>
+                    <a href="https://www.instagram.com/ivofspades/" target="_blank">
+                        <img src="/images/icon/instagram.png" alt="Instagram" idth="30" height="24" class="d-inline-block align-text-top" />
+                    </a>
+                    <a href="https://www.facebook.com/IVOFSPADES/" target="_blank">
+                        <img src="/images/icon/facebook.png" alt="Facebook" idth="30" height="24" class="d-inline-block align-text-top" />
+                    </a>
+                    <a href="https://www.tiktok.com/@@ivofspadesofficial" target="_blank">
+                        <img src="/images/icon/tiktok.png" alt="Tiktok" idth="30" height="24" class="d-inline-block align-text-top" />
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="@(ViewData["Title"] as string == "Home" ? "container-fluid p-0" : "container")">
+        <main role="main" class="pb-0">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - ivos_website - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="container-fluid text-center bg-primary py-4 mt-auto">
+        <div class="row">
+            <a asp-area="" asp-controller="Home" asp-action="SignUp"><span class="brand-text footer">Sign Up and Stay Tuned!</span></a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -47,3 +73,5 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+

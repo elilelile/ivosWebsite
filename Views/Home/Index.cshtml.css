@@ -1,0 +1,83 @@
+﻿.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.landing-page-vid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-primary {
+    background-color: #610D0C !important;
+}
+
+.bg-secondary {
+    background-color:#A29B95 !important;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 10px;
+}
+
+.title-music {
+    color: #FFF;
+}
+
+.title-ivos {
+    color: #610D0C;
+}
+
+.view-all-text {
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 7px;
+    border: 5px solid #FFF;
+    padding: 15px 40px;
+}
+
+.view-all-text:hover {
+    background-color: #FFF;
+    color: #610D0C !important;
+    font-weight: 900;
+    border: none;
+}
+
+.card-text {
+    color: #610D0C;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px;
+}
+
+.about-btn-text {
+    color: #610D0C;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 7px;
+    border: 5px solid #610D0C;
+    padding: 15px 40px;
+}
+
+.about-btn-text:hover {
+    background-color: #610D0C;
+    color: #FFF;
+    font-weight: 900;
+    border: none;
+}
