@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ivosWebsite.Models.Member>
+
 @{
+    ViewData["Title"] = "Home";
 }
+
+<section class="container-fluid p-0 bg-primary">
+    <div class="about-header">
+        <img src="/images/ivos5.jpg" class="header-img"/>
+    </div>
+    <h1 class="about-title pt-5 text-center">BEHIND THE MUSIC</h1>
+    <div class="container">
+        <div class="row pt-5 pb-4">
+            @foreach (var member in Model)
+            {
+                <div class="card col-3 border-0 bg-transparent pb-0">
+                    <img src="@member.Photo"/>
+                    <div class="card-body text-center">
+                        <p class="name">@member.Name</p>
+                        @foreach (var position in member.Position)
+                        {
+                            <p class="m-position">@position</p>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="container">
+        <hr class="m-0 flex-grow-1" />
+    </div>
+</section>
